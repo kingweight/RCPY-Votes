@@ -31,7 +31,8 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     { label: 'Candidates Info', icon: 'pi pi-fw pi-eye', routerLink: ['/candidate/panel'], badge: 'NEW' },
                     { label: 'Ballot Info', icon: 'pi pi-fw pi-image', routerLink: ['/candidate/media'] },
-                    { label: 'Volunteer Info', icon: 'pi pi-fw pi-book', routerLink: ['/candidate/floatlabel'] },
+                    { label: 'Volunteer Info', icon: 'pi pi-fw pi-book', routerLink: ['/pages/timeline'] },
+                    { label: 'Search Candidates', icon: 'pi pi-fw pi-bookmark', routerLink: ['/candidate/video'] },
                 ]
             },
             {

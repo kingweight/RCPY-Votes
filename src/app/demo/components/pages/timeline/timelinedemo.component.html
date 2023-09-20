@@ -1,49 +1,17 @@
 <div class="grid">
-    <div class="col-12 md:col-6">
-        <div class="card">
-            <h5>Left Align</h5>
-            <p-timeline [value]="events1">
-                <ng-template pTemplate="content" let-event>
-                    {{event.status}}
-                </ng-template>
-            </p-timeline>
-        </div>
-    </div>
-    <div class="col-12 md:col-6">
-        <div class="card">
-            <h5>Right Align</h5>
-            <p-timeline [value]="events1" align="right">
-                <ng-template pTemplate="content" let-event>
-                    {{event.status}}
-                </ng-template>
-            </p-timeline>
-        </div>
-    </div>
-    <div class="col-12 md:col-6">
-        <div class="card">
-            <h5>Alternate Align</h5>
-            <p-timeline [value]="events1" align="alternate">
-                <ng-template pTemplate="content" let-event>
-                    {{event.status}}
-                </ng-template>
-            </p-timeline>
-        </div>
-    </div>
-    <div class="col-12 md:col-6">
-        <div class="card">
-            <h5>Opposite Content</h5>
-            <p-timeline [value]="events1">
-                <ng-template pTemplate="content" let-event>
-                    <small class="p-text-secondary">{{event.date}}</small>
-                </ng-template>
-                <ng-template pTemplate="opposite" let-event>
-                    {{event.status}}
-                </ng-template>
-            </p-timeline>
-        </div>
-    </div>
+<div class="col-12 md:col-6 p-6 text-center md:text-right flex align-items-center ">
+    <section>
+        <span class="block text-6xl font-bold mb-1"> Volunteers power </span>
+    <div class="text-6xl text-primary font-bold mb-3">RCPY VOTES!</div>
+    <p class="mt-0 mb-4 text-700 line-height-3">You are the key to keeping New York City’s democracy strong! Take action and become a NYC Votes Volunteer today. </p>
+    <p class="mt-0 mb-4 text-700 line-height-3">Volunteers ensure their fellow New Yorkers have the information and support they need to make their voices heard. Join our phone banks, text banks, or serve as a trusted messenger in your community!</p>
+    </section>
 </div>
-
+<div class="col-12 md:col-6 overflow-hidden">
+    <img src="assets/demo/images/landing/votes-1.jpg" alt="Image" class=" block md:h-full"
+        style="width: 500px;padding-top: 20px;">
+</div>
+</div>
 <div class="card">
     <h5>Customized</h5>
     <p-timeline [value]="events1" align="alternate" styleClass="customized-timeline">
@@ -55,37 +23,8 @@
         <ng-template pTemplate="content" let-event>
             <p-card [header]="event.status" [subheader]="event.date">
                 <img *ngIf="event.image" [src]="'assets/demo/images/product/' + event.image" [alt]="event.name" width="200" class="shadow-2" />
-                <p class="line-height-3 my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-                <button pButton label="Read more" class="p-button-outlined mb-5"></button>
+                <p class="line-height-3 my-3">{{event.description}}</p>
             </p-card>
-        </ng-template>
-    </p-timeline>
-</div>
-
-<div class="card">
-    <h5>Horizontal</h5>
-    <h6>Top Align</h6>
-    <p-timeline [value]="events2" layout="horizontal" align="top">
-        <ng-template pTemplate="content" let-event>
-            {{event}}
-        </ng-template>
-    </p-timeline>
-
-    <h6>Bottom Align</h6>
-    <p-timeline [value]="events2" layout="horizontal" align="bottom">
-        <ng-template pTemplate="content" let-event>
-            {{event}}
-        </ng-template>
-    </p-timeline>
-
-    <h6>Alternate Align</h6>
-    <p-timeline [value]="events2" layout="horizontal" align="alternate">
-        <ng-template pTemplate="content" let-event>
-            {{event}}
-        </ng-template>
-        <ng-template pTemplate="opposite" let-event>
-            &nbsp;
         </ng-template>
     </p-timeline>
 </div>
