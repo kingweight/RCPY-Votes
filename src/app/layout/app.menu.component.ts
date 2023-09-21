@@ -44,7 +44,58 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Vote Services',
                 items: [
-                    { label: 'Vote Services', icon: 'pi pi-fw pi-comment', routerLink: ['/pages/empty'] },
+                    {
+                        label: 'Why Vote', icon: 'pi pi-fw pi-bookmark',
+                        items: [
+                            {
+                                label: 'What is at Stake', icon: 'pi pi-fw pi-bookmark',
+                               
+                            },
+                            {
+                                label: 'Elected Offices', icon: 'pi pi-fw pi-bookmark',
+                               
+                            },
+                            {
+                                label: 'Types of Elections', icon: 'pi pi-fw pi-bookmark',
+                               
+                            },
+                            {
+                                label: 'Ballot Proposals', icon: 'pi pi-fw pi-bookmark',
+                               
+                            }
+                        ]
+                    },
+                    {
+                        label: 'FAQ', icon: 'pi pi-fw pi-bookmark',
+                        items: [
+                            {
+                                label: 'Learn how to use', icon: 'pi pi-fw pi-bookmark',
+                                routerLink: ['/pages/usage']
+                            },
+                            {
+                                label: 'Elected Offices', icon: 'pi pi-fw pi-bookmark',
+                               
+                            },
+                            {
+                                label: 'Types of Elections', icon: 'pi pi-fw pi-bookmark',
+                               
+                            },
+                            {
+                                label: 'Ballot Proposals', icon: 'pi pi-fw pi-bookmark',
+                                routerLink:['/voteservice/ballotproposals']
+                               
+                            }
+                        ]
+                    },
+                    { label: 'Contact US', icon: 'pi pi-fw pi-image', routerLink: ['/pages/contactus'] }
+                ]
+            },
+            {
+                label: 'Award and Points',
+                items: [
+                    { label: 'Award', icon: 'pi pi-fw pi-eye', routerLink: ['/pages/award'], badge: 'NEW' },
+                    { label: 'Points', icon: 'pi pi-fw pi-image', routerLink: ['/pages/point'] }
+                   
                 ]
             },
             {
