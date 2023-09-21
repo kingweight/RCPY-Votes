@@ -31,7 +31,8 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     { label: 'Candidates Info', icon: 'pi pi-fw pi-eye', routerLink: ['/candidate/panel'], badge: 'NEW' },
                     { label: 'Ballot Info', icon: 'pi pi-fw pi-image', routerLink: ['/candidate/media'] },
-                    { label: 'Volunteer Info', icon: 'pi pi-fw pi-book', routerLink: ['/candidate/floatlabel'] },
+                    { label: 'Volunteer Info', icon: 'pi pi-fw pi-book', routerLink: ['/pages/timeline'] },
+                    { label: 'Search Candidates', icon: 'pi pi-fw pi-bookmark', routerLink: ['/candidate/video'] },
                 ]
             },
             {
@@ -44,6 +45,57 @@ export class AppMenuComponent implements OnInit {
                 label: 'Vote Services',
                 items: [
                     { label: 'Vote Services', icon: 'pi pi-fw pi-comment', routerLink: ['/pages/vote'] },
+                    {
+                        label: 'Why Vote', icon: 'pi pi-fw pi-bookmark',
+                        items: [
+                            {
+                                label: 'What is at Stake', icon: 'pi pi-fw pi-bookmark',
+                               
+                            },
+                            {
+                                label: 'Elected Offices', icon: 'pi pi-fw pi-bookmark',
+                               
+                            },
+                            {
+                                label: 'Types of Elections', icon: 'pi pi-fw pi-bookmark',
+                               
+                            },
+                            {
+                                label: 'Ballot Proposals', icon: 'pi pi-fw pi-bookmark',
+                               
+                            }
+                        ]
+                    },
+                    {
+                        label: 'FAQ', icon: 'pi pi-fw pi-bookmark',
+                        items: [
+                            {
+                                label: 'Learn how to use', icon: 'pi pi-fw pi-bookmark',
+                                routerLink: ['/pages/usage']
+                            },
+                            {
+                                label: 'Elected Offices', icon: 'pi pi-fw pi-bookmark',
+                               
+                            },
+                            {
+                                label: 'Types of Elections', icon: 'pi pi-fw pi-bookmark',
+                               
+                            },
+                            {
+                                label: 'Ballot Proposals', icon: 'pi pi-fw pi-bookmark',
+                                routerLink:['/voteservice/ballotproposals']
+                               
+                            }
+                        ]
+                    },
+                    { label: 'Contact US', icon: 'pi pi-fw pi-image', routerLink: ['/pages/contactus'] }
+                ]
+            },
+            {
+                label: 'Award and Points',
+                items: [
+                    { label: 'Award', icon: 'pi pi-fw pi-eye', routerLink: ['/pages/award'], badge: 'NEW' },
+                    { label: 'Points', icon: 'pi pi-fw pi-image', routerLink: ['/pages/point'] }
                 ]
             },
             {
