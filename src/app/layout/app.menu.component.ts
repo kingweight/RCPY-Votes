@@ -44,6 +44,7 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Vote Services',
                 items: [
+                    { label: 'Vote Services', icon: 'pi pi-fw pi-comment', routerLink: ['/pages/vote'] },
                     {
                         label: 'Why Vote', icon: 'pi pi-fw pi-bookmark',
                         items: [
@@ -95,7 +96,6 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     { label: 'Award', icon: 'pi pi-fw pi-eye', routerLink: ['/pages/award'], badge: 'NEW' },
                     { label: 'Points', icon: 'pi pi-fw pi-image', routerLink: ['/pages/point'] }
-                   
                 ]
             },
             {
