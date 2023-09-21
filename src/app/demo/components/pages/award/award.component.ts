@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/demo/api/product';
+import { Award } from 'src/app/demo/api/award';
 import { MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { ProductService } from 'src/app/demo/service/product.service';
@@ -18,6 +19,8 @@ export class AwardComponent implements OnInit {
 
     products: Product[] = [];
 
+    awards: Award[] = [];
+
     product: Product = {};
 
     selectedProducts: Product[] = [];
@@ -33,7 +36,7 @@ export class AwardComponent implements OnInit {
     constructor(private productService: ProductService, private messageService: MessageService) { }
 
     ngOnInit() {
-        this.productService.getAward().then(data => this.products = data);
+        this.productService.getAward().then(data => this.awards = data);
 
         this.cols = [
             { field: 'product', header: 'Product' },

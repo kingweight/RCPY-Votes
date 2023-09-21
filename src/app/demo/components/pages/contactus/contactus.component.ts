@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { SelectItem } from 'primeng/api';
 import { CountryService } from 'src/app/demo/service/country.service';
-
+import { MessageService } from 'primeng/api';
 @Component({
-    templateUrl: './contactus.component.html'
+    templateUrl: './contactus.component.html',
+    providers: [MessageService]
 })
 export class ContactusComponent implements OnInit {
     
@@ -45,7 +46,7 @@ export class ContactusComponent implements OnInit {
 
     valueKnob = 20;
 
-    constructor(private countryService: CountryService) { }
+    constructor(private countryService: CountryService, private messageService: MessageService) { }
 
     ngOnInit() {
         this.countryService.getCountries().then(countries => {
@@ -85,5 +86,9 @@ export class ContactusComponent implements OnInit {
         }
 
         this.filteredCountries = filtered;
+    }
+
+    submitMessage(){
+        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Your message has been submitted', life: 3000 });
     }
 }
