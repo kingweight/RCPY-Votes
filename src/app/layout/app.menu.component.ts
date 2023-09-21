@@ -50,18 +50,11 @@ export class AppMenuComponent implements OnInit {
                         items: [
                             {
                                 label: 'What is at Stake', icon: 'pi pi-fw pi-bookmark',
-                               
-                            },
-                            {
-                                label: 'Elected Offices', icon: 'pi pi-fw pi-bookmark',
-                               
-                            },
-                            {
-                                label: 'Types of Elections', icon: 'pi pi-fw pi-bookmark',
-                               
+                                routerLink:['/voteservice/stake']
                             },
                             {
                                 label: 'Ballot Proposals', icon: 'pi pi-fw pi-bookmark',
+                                routerLink:['/voteservice/ballotproposals']
                                
                             }
                         ]
@@ -74,16 +67,20 @@ export class AppMenuComponent implements OnInit {
                                 routerLink: ['/pages/usage']
                             },
                             {
-                                label: 'Elected Offices', icon: 'pi pi-fw pi-bookmark',
-                               
+                                label: 'Vote Process', icon: 'pi pi-fw pi-bookmark',
+                                routerLink:['/voteservice/vote']
                             },
                             {
-                                label: 'Types of Elections', icon: 'pi pi-fw pi-bookmark',
-                               
+                                label: 'How to Request a mail ballot', icon: 'pi pi-fw pi-bookmark',
+                                routerLink:['/voteservice/votemail']
                             },
                             {
-                                label: 'Ballot Proposals', icon: 'pi pi-fw pi-bookmark',
-                                routerLink:['/voteservice/ballotproposals']
+                                label: 'Who represents in your school Districts', icon: 'pi pi-fw pi-bookmark',
+                                routerLink:['/voteservice/represent']
+                            },
+                            {
+                                label: 'Polling location', icon: 'pi pi-fw pi-bookmark',
+                                routerLink:['/voteservice/location']
                                
                             }
                         ]
