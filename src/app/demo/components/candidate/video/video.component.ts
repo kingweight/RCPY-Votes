@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-video',
@@ -12,7 +12,7 @@ export class VideoComponent implements OnInit {
   public videosInfo: any;
   public inputvalue: string;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private el: ElementRef) {
 
   }
 
@@ -24,8 +24,22 @@ export class VideoComponent implements OnInit {
     console.log("123", value)
     this.http.get('assets/demo/data/search-video.json').subscribe(videosInfo => {
       this.videosInfo = videosInfo;
-      this.videosInfo = this.videosInfo.filter(videoInfo =>(typeof videoInfo?.url === 'string' && videoInfo.url))
+      this.videosInfo = this.videosInfo.filter(videoInfo => (typeof videoInfo?.url === 'string' && videoInfo.url))
       this.showVideo = true;
+      this.videosInfo.forEach((videoInfo,i) => {
+        setTimeout(() => {
+          this.playBySeconds(videoInfo.start_ts, i);
+        }, 1);
+      });
+      
     })
+  }
+
+  playBySeconds(num, index) {
+    if (num && document.getElementById('videoPlayer' + index)) {
+      let myVideo = document.getElementById('videoPlayer' + index);
+      (myVideo as any).play();
+      (myVideo as any).currentTime = num;
+    }
   }
 }

@@ -21,7 +21,7 @@
                     (click)="searchVideo(inputvalue)"></button>
             </div>
             <div *ngIf="showVideo">
-                <video style="padding-right: 20px; padding-bottom: 20px;" width="320" height="240" controls="" *ngFor="let video of videosInfo">
+                <video style="padding-right: 20px; padding-bottom: 20px;" width="320" height="240" controls="" *ngFor="let video of videosInfo; let index = index" id="{{'videoPlayer' + index}}" >
                     <source [src]='video.url' type="video/mp4">
                 </video>
             </div>
