@@ -43,7 +43,7 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Vote Services',
                 items: [
-                    { label: 'Vote Services', icon: 'pi pi-fw pi-comment', routerLink: ['/pages/empty'] },
+                    { label: 'Vote Services', icon: 'pi pi-fw pi-comment', routerLink: ['/pages/vote'] },
                 ]
             },
             {
