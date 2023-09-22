@@ -22,6 +22,13 @@ export class ProductService {
             .then(data => data);
     }
 
+    getMails() {
+        return this.http.get<any>('assets/demo/data/mails.json')
+            .toPromise()
+            .then(res => res.data as Product[])
+            .then(data => data);
+    }
+
     getAward() {
         return this.http.get<any>('assets/demo/data/award.json')
             .toPromise()

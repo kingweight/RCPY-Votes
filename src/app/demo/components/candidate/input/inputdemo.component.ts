@@ -51,7 +51,7 @@ export class InputDemoComponent implements OnInit {
         });
 
         this.cities = [
-            { label: 'New York', value: { id: 1, name: 'New York', code: 'NY' } },
+            { label: 'Pennsylvania', value: { id: 1, name: 'Pennsylvania', code: 'NY' } },
             { label: 'Rome', value: { id: 2, name: 'Rome', code: 'RM' } },
             { label: 'London', value: { id: 3, name: 'London', code: 'LDN' } },
             { label: 'Istanbul', value: { id: 4, name: 'Istanbul', code: 'IST' } },

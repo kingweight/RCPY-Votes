@@ -85,7 +85,8 @@ export class AppMenuComponent implements OnInit {
                             }
                         ]
                     },
-                    { label: 'Contact US', icon: 'pi pi-fw pi-image', routerLink: ['/pages/contactus'] }
+                    { label: 'Contact US', icon: 'pi pi-fw pi-image', routerLink: ['/pages/contactus'] },
+                    { label: 'Mailbox', icon: 'pi pi-fw pi-comment', routerLink: ['/pages/mailbox'] },
                 ]
             },
             {

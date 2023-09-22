@@ -54,7 +54,7 @@ export class ContactusComponent implements OnInit {
         });
 
         this.cities = [
-            { label: 'New York', value: { id: 1, name: 'New York', code: 'NY' } },
+            { label: 'Pennsylvania', value: { id: 1, name: 'Pennsylvania', code: 'NY' } },
             { label: 'Rome', value: { id: 2, name: 'Rome', code: 'RM' } },
             { label: 'London', value: { id: 3, name: 'London', code: 'LDN' } },
             { label: 'Istanbul', value: { id: 4, name: 'Istanbul', code: 'IST' } },
@@ -62,7 +62,7 @@ export class ContactusComponent implements OnInit {
         ];
 
         this.subject = [
-            { label: 'Complaint', value: { id: 1, name: 'New York', code: 'NY' } },
+            { label: 'Complaint', value: { id: 1, name: 'Pennsylvania', code: 'NY' } },
             { label: 'Query', value: { id: 2, name: 'Rome', code: 'RM' } },
             { label: 'Advice', value: { id: 3, name: 'London', code: 'LDN' } }
           
