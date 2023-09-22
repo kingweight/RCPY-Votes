@@ -20,7 +20,6 @@ import { RouterModule } from '@angular/router';
         { path: 'table', data: { breadcrumb: 'Table' }, loadChildren: () => import('./table/tabledemo.module').then(m => m.TableDemoModule) },
         { path: 'tree', data: { breadcrumb: 'Tree' }, loadChildren: () => import('./tree/treedemo.module').then(m => m.TreeDemoModule) },
         { path: 'menu', data: { breadcrumb: 'Menu' }, loadChildren: () => import('./menus/menus.module').then(m => m.MenusModule) },
-        { path: 'vote', data: { breadcrumb: 'vote' }, loadChildren: () => import('../pages/vote/vote.module').then(m => m.VoteModule) },
         { path: '**', redirectTo: '/notfound' }
     ])],
     exports: [RouterModule]

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { VoteComponent} from './vote.component';
+import { VoteWaysComponent } from './voteways.component';
 
 @NgModule({
     imports: [RouterModule.forChild([
-        { path: '', component: VoteComponent}
+        { path: '', component: VoteWaysComponent }
     ])],
     exports: [RouterModule]
 })
-export class VoteRoutingModule { }
+export class VoteWaysRoutingModule { }

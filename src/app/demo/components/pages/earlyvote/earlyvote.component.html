@@ -1,0 +1,46 @@
+<div class="grid">
+    <div class="col-12">
+        <div class="card">
+            <div class="article single-col">
+                <span class="block text-6xl mb-1">Early Voting</span>
+                <h2>Vote early before Election Day</h2>
+                <h3>Every NYC voter can vote early in person before Election Day. Voting early is convenient, fast, and
+                    flexible.
+                    <br><br>
+                </h3>
+                <h4>Where to vote</h4>
+                <p>You must vote at your assigned early voting site. Your early voting site may be different from your
+                    Election Day
+                    poll site, so make sure to check before you go!</p>
+                <p><a rel="noopener" href="https://findmypollsite.vote.nyc/" target="_blank" title="Find my poll site"
+                        class="content-link">Find my poll site</a></p>
+                <h4>When to vote</h4>
+                <p>You can vote early from October 28 - November 5, though hours vary each day. Just like on Election
+                    Day, you can
+                    visit your early voting site any time polls are open.</p>
+
+                <h5>Timeline</h5>
+                <p-timeline [value]="events1" align="alternate" styleClass="customized-timeline">
+                    <ng-template pTemplate="marker" let-event>
+                        <span
+                            class="flex z-1 w-2rem h-2rem align-items-center justify-content-center text-white border-circle shadow-2"
+                            [style.backgroundColor]="event.color">
+                            <i [ngClass]="event.icon"></i>
+                        </span>
+                    </ng-template>
+                    <ng-template pTemplate="content" let-event>
+                        <p-card [header]="event.status" [subheader]="event.date">
+                            <img *ngIf="event.image" [src]="'assets/demo/images/product/' + event.image"
+                                [alt]="event.name" width="200" class="shadow-2" />
+                            <p class="line-height-3 my-3">{{event.description}}</p>
+                        </p-card>
+                    </ng-template>
+                </p-timeline>
+                
+                <p><em><br>Did you know: Early voting is habit-forming! Voters were 372% more likely to vote early in
+                        the 2020
+                        general election if they had previously voted early.</em></p>
+            </div>
+        </div>
+    </div>
+</div>
