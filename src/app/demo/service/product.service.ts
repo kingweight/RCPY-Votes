@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from '../api/product';
+import { Award } from '../api/award';
 
 @Injectable()
 export class ProductService {
@@ -24,7 +25,7 @@ export class ProductService {
     getAward() {
         return this.http.get<any>('assets/demo/data/award.json')
             .toPromise()
-            .then(res => res.data as Product[])
+            .then(res => res.data as Award[])
             .then(data => data);
     }
 
