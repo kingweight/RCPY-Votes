@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthService {
 
-    regitrationStatus: string = 'inprogress';
+
+    regitrationStatus: string= "Not Start";
+
     constructor(private http: HttpClient) { }
 
     //{email, passowrd}
