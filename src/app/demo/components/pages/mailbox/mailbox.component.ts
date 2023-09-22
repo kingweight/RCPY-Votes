@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/demo/api/product';
-import { Award } from 'src/app/demo/api/award';
 import { MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { ProductService } from 'src/app/demo/service/product.service';
 
 @Component({
-    templateUrl: './award.component.html',
+    templateUrl: './mailbox.component.html',
     providers: [MessageService]
 })
-export class AwardComponent implements OnInit {
+export class MailboxComponent implements OnInit {
 
     productDialog: boolean = false;
 
@@ -18,8 +17,6 @@ export class AwardComponent implements OnInit {
     deleteProductsDialog: boolean = false;
 
     products: Product[] = [];
-
-    awards: Award[] = [];
 
     product: Product = {};
 
@@ -36,14 +33,12 @@ export class AwardComponent implements OnInit {
     constructor(private productService: ProductService, private messageService: MessageService) { }
 
     ngOnInit() {
-        this.productService.getAward().then(data => this.awards = data);
+        this.productService.getMails().then(data => this.products = data);
 
         this.cols = [
             { field: 'product', header: 'Product' },
-            { field: 'price', header: 'Price' },
-            { field: 'category', header: 'Category' },
-            { field: 'rating', header: 'Reviews' },
-            { field: 'inventoryStatus', header: 'Status' }
+            { field: 'price', header: 'Price' }
+           
         ];
 
         this.statuses = [

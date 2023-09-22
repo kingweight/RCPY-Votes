@@ -9,6 +9,15 @@ import { ButtonModule } from 'primeng/button';
 import { StyleClassModule } from 'primeng/styleclass';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { DashboardsRoutingModule } from './dashboard-routing.module';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { BadgeModule } from 'primeng/badge';
+import { AvatarModule } from 'primeng/avatar';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { TagModule } from 'primeng/tag';
+import { ChipModule } from 'primeng/chip';
+import { SkeletonModule } from 'primeng/skeleton';
+import { AvatarGroupModule } from 'primeng/avatargroup';
+import { ScrollTopModule } from 'primeng/scrolltop';
 
 @NgModule({
     imports: [
@@ -20,7 +29,17 @@ import { DashboardsRoutingModule } from './dashboard-routing.module';
         StyleClassModule,
         PanelMenuModule,
         ButtonModule,
-        DashboardsRoutingModule
+        DashboardsRoutingModule,
+        ProgressBarModule,
+		BadgeModule,
+		AvatarModule,
+		ScrollPanelModule,
+		TagModule,
+		ChipModule,
+		ButtonModule,
+		SkeletonModule,
+		AvatarGroupModule,
+		ScrollTopModule
     ],
     declarations: [DashboardComponent]
 })

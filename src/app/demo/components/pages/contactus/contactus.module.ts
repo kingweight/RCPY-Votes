@@ -25,9 +25,16 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { ColorPickerModule } from 'primeng/colorpicker';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { SliderModule } from 'primeng/slider';
-
+import { DialogModule } from 'primeng/dialog';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
+import { ToastModule } from 'primeng/toast';
 @NgModule({
 	imports: [
+		ToastModule,
+		MessagesModule,
+		MessageModule,
+		DialogModule,
 		CommonModule,
 		FormsModule,
 		ContactusRoutingModule,

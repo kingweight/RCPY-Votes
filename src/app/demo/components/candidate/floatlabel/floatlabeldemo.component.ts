@@ -38,7 +38,7 @@ export class FloatLabelDemoComponent implements OnInit {
 
     constructor(private countryService: CountryService) {
         this.cities = [
-            {name: 'New York', code: 'NY'},
+            {name: 'Pennsylvania', code: 'NY'},
             {name: 'Rome', code: 'RM'},
             {name: 'London', code: 'LDN'},
             {name: 'Istanbul', code: 'IST'},
