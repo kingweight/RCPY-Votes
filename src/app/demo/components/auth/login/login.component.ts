@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../service/auth.service';
 
 @Component({
     selector: 'app-login',
@@ -21,11 +22,21 @@ export class LoginComponent {
     email: string = '';
 
     constructor(public layoutService: LayoutService,
+        public authervice: AuthService,
         private router: Router) { }
 
     login () {
         console.log(this.email + ' ' + this.password);
-        this.router.navigate(['/dashboard']);
+        this.authervice.login(this.email, this.password).then((res:any) => {
+            if (res.success) {
+                this.authervice.regitrationStatus = res.data.registerStatus;
+                this.router.navigate(['/dashboard']);
+            } else {
+                this.router.navigate(['/access']);
+            }
+            
+        });
+        
     }
     
 }
