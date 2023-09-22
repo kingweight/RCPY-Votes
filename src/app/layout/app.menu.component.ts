@@ -38,13 +38,15 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Your Votes',
                 items: [
-                    { label: 'Your Votes', icon: 'pi pi-fw pi-file', routerLink: ['/pages/crud'] },
+                    { label: 'Ways to Vote', icon: 'pi pi-fw pi-th-large', routerLink: ['/pages/voteways'] },
+                    { label: 'Early Voting', icon: 'pi pi-fw pi-send', routerLink: ['/pages/earlyvote'] },
+                    { label: 'Vote by Mail', icon: 'pi pi-fw pi-truck', routerLink: ['/pages/mailvote'] },
+                    { label: 'Election Day', icon: 'pi pi-fw pi-check-circle', routerLink: ['/pages/electionday'] },
                 ]
             },
             {
                 label: 'Vote Services',
                 items: [
-                    { label: 'Vote Services', icon: 'pi pi-fw pi-comment', routerLink: ['/pages/vote'] },
                     {
                         label: 'Why Vote', icon: 'pi pi-fw pi-bookmark',
                         items: [
