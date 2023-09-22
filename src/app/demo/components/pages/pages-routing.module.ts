@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
         { path: 'award', loadChildren: () => import('./award/award.module').then(m => m.AwardModule) },
         { path: 'usage', loadChildren: () => import('./usage/usage.module').then(m => m.UsageModule) },
         { path: 'contactus', loadChildren: () => import('./contactus/contactus.module').then(m => m.ContactusModule) },
+        { path: 'mailbox', loadChildren: () => import('./mailbox/mailbox.module').then(m => m.MailboxModule) },
         { path: '**', redirectTo: '/notfound' }
     ])],
     exports: [RouterModule]
