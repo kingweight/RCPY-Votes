@@ -4,21 +4,24 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthService {
 
+
     regitrationStatus: string= "Not Start";
+
     constructor(private http: HttpClient) { }
 
     //{email, passowrd}
-    login(email, passowrd) {
+    login1(email, passowrd) {
         return this.http.get<any>('/assets/demo/data/login.json',)
             .toPromise()
     }
 
-    register(req) {
-        return this.http.post<any>('assets/demo/data/register.json', req)
+    login(email, passowrd) {
+        return this.http.post<any>('https://p4xp3ms2cm.us-east-1.awsapprunner.com/voter/login?email='+email+'&password='+passowrd,{})
             .toPromise()
-            .then(res => res.data as any[])
-            .then(data => {
-                console.log(data);
-            });
+    }
+
+    register(req) {
+        return this.http.post<any>('https://p4xp3ms2cm.us-east-1.awsapprunner.com/voter/register', req)
+            .toPromise()
     }
 }

@@ -8,6 +8,9 @@ import { CalendarModule } from 'primeng/calendar';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { DropdownModule } from 'primeng/dropdown';
 import { StepsModule } from 'primeng/steps';
+import { PanelModule } from 'primeng/panel';
+import { FieldsetModule } from 'primeng/fieldset';
+import { PasswordModule } from 'primeng/password';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { StepsModule } from 'primeng/steps';
         RadioButtonModule,
         FormsModule,
         DropdownModule,
-        StepsModule
+        StepsModule,
+        PanelModule,
+        FieldsetModule,
+        PasswordModule
     ],
     declarations: [ErrorComponent]
 })
