@@ -18,6 +18,8 @@ import { ChipModule } from 'primeng/chip';
 import { SkeletonModule } from 'primeng/skeleton';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { ScrollTopModule } from 'primeng/scrolltop';
+import { TimelineModule } from 'primeng/timeline';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
     imports: [
@@ -39,7 +41,9 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 		ButtonModule,
 		SkeletonModule,
 		AvatarGroupModule,
-		ScrollTopModule
+		ScrollTopModule,
+        TimelineModule,
+        CardModule
     ],
     declarations: [DashboardComponent]
 })

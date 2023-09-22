@@ -4,6 +4,8 @@ import { Product } from '../../api/product';
 import { ProductService } from '../../service/product.service';
 import { Subscription } from 'rxjs';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
+import { PrimeIcons } from 'primeng/api';
+import { AuthService } from '../../service/auth.service';
 
 @Component({
     templateUrl: './dashboard.component.html',
@@ -20,7 +22,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     subscription!: Subscription;
 
-    constructor(private productService: ProductService, public layoutService: LayoutService) {
+    events1: any[] = [];
+
+    constructor(private productService: ProductService, public layoutService: LayoutService,public authervice: AuthService) {
         this.subscription = this.layoutService.configUpdate$.subscribe(() => {
             this.initChart();
         });
@@ -33,6 +37,13 @@ export class DashboardComponent implements OnInit, OnDestroy {
         this.items = [
             { label: 'Add New', icon: 'pi pi-fw pi-plus' },
             { label: 'Remove', icon: 'pi pi-fw pi-minus' }
+        ];
+
+        this.events1 = [
+            { status: 'Register', date: 'Your Status : ' + this.authervice.regitrationStatus, icon: PrimeIcons.SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg' },
+            { status: 'Voting', date: 'Your Status : ' + this.authervice.regitrationStatus, icon: PrimeIcons.COG, color: '#673AB7' },
+            { status: 'Delivering', date: 'Your Status : ' + this.authervice.regitrationStatus, icon: PrimeIcons.ENVELOPE, color: '#FF9800' },
+            { status: 'Complete', date: 'Your Status : ' + this.authervice.regitrationStatus, icon: PrimeIcons.CHECK, color: '#607D8B' }
         ];
     }
 

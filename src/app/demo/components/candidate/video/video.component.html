@@ -15,13 +15,13 @@
             <div class="flex align-items-center gap-2 mb-4">
                 <span>
                     <label for="firstname5" class="p-sr-only">Search your interested topic...</label>
-                    <input style="width: 500px" id="firstname5" type="text" pInputText placeholder="topic name" [(ngModel)] = "inputvalue">
+                    <input id="firstname5" type="text" pInputText placeholder="topic name" [(ngModel)] = "inputvalue">
                 </span>
                 <button pButton pRipple type="button" label="Search" icon="pi pi-search" pTooltip="Click to proceed" #item
                     (click)="searchVideo(inputvalue)"></button>
             </div>
             <div *ngIf="showVideo">
-                <video style="padding-right: 20px; padding-bottom: 20px;" width="320" height="240" controls="" *ngFor="let video of videosInfo; let index = index" id="{{'videoPlayer' + index}}" >
+                <video autoplay="autoplay" style="padding-right: 20px; padding-bottom: 20px;" width="320" height="240" controls="" *ngFor="let video of videosInfo; let index = index" id="{{'videoPlayer' + index}}" crossorigin="anonymous">
                     <source [src]='video.url' type="video/mp4">
                 </video>
             </div>

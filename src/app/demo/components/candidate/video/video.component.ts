@@ -20,9 +20,9 @@ export class VideoComponent implements OnInit {
 
   }
 
-  searchVideo(value: string): void {
-    console.log("123", value)
-    this.http.get('assets/demo/data/search-video.json').subscribe(videosInfo => {
+  searchVideo(question: string): void {
+    console.log("123", question)
+    this.http.get('https://unbiased-popular-stud.ngrok-free.app/candidate?question=' + question).subscribe(videosInfo => {
       this.videosInfo = videosInfo;
       this.videosInfo = this.videosInfo.filter(videoInfo => (typeof videoInfo?.url === 'string' && videoInfo.url))
       this.showVideo = true;

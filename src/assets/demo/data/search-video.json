@@ -1,9 +1,11 @@
-[{
-  "candidate": "name2",
-  "content": " guess what, at the bottom. Rather than indoctrinating young people with inappropriate racial, sexual, and political material, which is what we're doing now, our schools must be totally refocused to prepare our children to ",
-  "score": 666.73,
-  "start_ts": 9,
-  "title": "Trump_Pledges_To_Close_Education_Department.mp4",
-  "type": "video",
-  "url": "https://www.runoob.com/try/demo_source/movie.mp4"
-}]
+[
+  {
+    "candidate": "candidate_name",
+    "content": " But you know what we'll do? We're going to have the greatest economy in the world. But if you want to kill the economy, get rid of your oil industry. And what about fracking? Now we have to ask about fracking.",
+    "score": 607.06,
+    "start_ts": 5123.36,
+    "title": "Trump_v_Biden_The_Final_Debate.mp4",
+    "type": "video",
+    "url": "https://731b-2408-832f-20b7-e5b1-f920-b6a4-4e99-4024.ngrok-free.app/static/video/Trump_v_Biden_The_Final_Debate.mp4"
+  }
+]
