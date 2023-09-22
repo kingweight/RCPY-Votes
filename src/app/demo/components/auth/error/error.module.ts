@@ -11,6 +11,7 @@ import { StepsModule } from 'primeng/steps';
 import { PanelModule } from 'primeng/panel';
 import { FieldsetModule } from 'primeng/fieldset';
 import { PasswordModule } from 'primeng/password';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PasswordModule } from 'primeng/password';
         StepsModule,
         PanelModule,
         FieldsetModule,
-        PasswordModule
+        PasswordModule,
+        ConfirmDialogModule
     ],
     declarations: [ErrorComponent]
 })

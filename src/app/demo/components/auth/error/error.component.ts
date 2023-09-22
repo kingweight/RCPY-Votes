@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { AuthService } from '../../../service/auth.service';
-
+import { ConfirmationService, MessageService, ConfirmEventType } from 'primeng/api';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-error',
     templateUrl: './error.component.html',
-    styleUrls: ['./error.component.scss']
+    styleUrls: ['./error.component.scss'],
+    providers: [ConfirmationService]
 })
-export class ErrorComponent { 
+export class ErrorComponent {
  
     steps: MenuItem[];
     middleName: string = '';
@@ -39,18 +41,28 @@ export class ErrorComponent {
     maillingState;
     maillingZip;
     password;
-
+    cities;
     residenseOption: any[];
+    acceptLabel = 'Login Now';
 
-    constructor(public authervice: AuthService) { }
+    constructor(public authervice: AuthService,
+        private router: Router,
+        public confirmationService: ConfirmationService) { }
 
     ngOnInit() {
         this.parties = [
-            { name: 'New York', code: 'NY' },
-            { name: 'Rome', code: 'RM' },
-            { name: 'London', code: 'LDN' },
-            { name: 'Istanbul', code: 'IST' },
-            { name: 'Paris', code: 'PRS' }
+            { name: 'Democratic', code: 'NY' },
+            { name: 'Repubblican', code: 'RM' },
+            { name: 'Green', code: 'LDN' },
+            { name: 'None', code: 'IST' },
+            { name: 'Other', code: 'PRS' }
+        ];
+        this.cities = [
+            { name: 'Democratic', code: 'NY' },
+            { name: 'Repubblican', code: 'RM' },
+            { name: 'Green', code: 'LDN' },
+            { name: 'None', code: 'IST' },
+            { name: 'Other', code: 'PRS' }
         ];
         this.residenseOption = [
             { name: 'Yes', key: 'hasResidense' },
@@ -108,7 +120,7 @@ export class ErrorComponent {
         reqBody.gender = this.gender;
         reqBody.padriver = this.driverLicense;
         reqBody.socialSecurity = this.socialSecurityNum;
-        reqBody.city = this.selectedCity.name;
+        reqBody.city = this.selectedCity;
         reqBody.residenseFlag = this.residenseFlag;
         reqBody.politicalParty = this.selectedParty.name;
         reqBody.selectedCountryLive = this.selectedCountryLive;
@@ -134,6 +146,20 @@ export class ErrorComponent {
         console.log(reqBody);
 
         this.authervice.register(reqBody).then((res:any) => {
+            if (res.success) {
+                this.confirmationService.confirm({
+                    message: 'Your registration is now processing, application will be completed around 10 days and we will send updates to your E-mail.',
+                    header: 'Confurations!',
+                    icon: 'pi pi-exclamation-triangle',
+                    accept: () => {
+                        this.authervice.regitrationStatus='inprogress';
+                        this.router.navigate(['dashboard']);
+                    },
+                    reject: (type) => {
+                        
+                    }
+                });
+            }
             console.log(res);
         })
     }
